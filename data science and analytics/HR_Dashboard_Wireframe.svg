@@ -1,0 +1,194 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="1200" height="750" fill="#0F2044"/>
+  <rect x="0" y="0" width="1200" height="65" fill="#1565C0"/>
+  <text x="24" y="42" font-size="26" font-weight="bold" fill="white">HR WORKFORCE ANALYTICS DASHBOARD</text>
+  <text x="900" y="30" font-size="11" fill="#BBDEFB">RetailMax India Pvt Ltd</text>
+  <text x="900" y="50" font-size="11" fill="#BBDEFB">As of June 2024  |  All Departments</text>
+
+  <!-- Slicer panel -->
+  <rect x="10" y="76" width="200" height="660" rx="8" fill="#162D5A"/>
+  <text x="110" y="103" font-size="13" font-weight="bold" fill="#64B5F6" text-anchor="middle">FILTERS</text>
+  <line x1="20" y1="110" x2="200" y2="110" stroke="#1565C0" stroke-width="1"/>
+  
+  <text x="20" y="132" font-size="11" fill="#BBDEFB">Department</text>
+  <rect x="20" y="140" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="59" y="158" font-size="9" fill="white" text-anchor="middle">Engineering</text>
+  <rect x="104" y="140" width="78" height="26" rx="5" fill="#64B5F6"/>
+  <text x="143" y="158" font-size="9" fill="#0F2044" font-weight="bold" text-anchor="middle">Sales</text>
+  <rect x="20" y="172" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="59" y="190" font-size="9" fill="white" text-anchor="middle">Finance</text>
+  <rect x="104" y="172" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="143" y="190" font-size="9" fill="white" text-anchor="middle">HR</text>
+  <rect x="20" y="204" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="59" y="222" font-size="9" fill="white" text-anchor="middle">Operations</text>
+  <rect x="104" y="204" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="143" y="222" font-size="9" fill="white" text-anchor="middle">IT</text>
+  <rect x="20" y="236" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="59" y="254" font-size="9" fill="white" text-anchor="middle">Marketing</text>
+  <rect x="104" y="236" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="143" y="254" font-size="9" fill="white" text-anchor="middle">Product</text>
+  
+  <text x="20" y="284" font-size="11" fill="#BBDEFB">Location</text>
+  <rect x="20" y="292" width="78" height="26" rx="5" fill="#64B5F6"/>
+  <text x="59" y="310" font-size="9" fill="#0F2044" font-weight="bold" text-anchor="middle">Mumbai</text>
+  <rect x="104" y="292" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="143" y="310" font-size="9" fill="white" text-anchor="middle">Delhi</text>
+  <rect x="20" y="324" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="59" y="342" font-size="9" fill="white" text-anchor="middle">Bangalore</text>
+  <rect x="104" y="324" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="143" y="342" font-size="9" fill="white" text-anchor="middle">Chennai</text>
+
+  <text x="20" y="374" font-size="11" fill="#BBDEFB">Gender</text>
+  <rect x="20" y="382" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="59" y="400" font-size="9" fill="white" text-anchor="middle">Male</text>
+  <rect x="104" y="382" width="78" height="26" rx="5" fill="#64B5F6"/>
+  <text x="143" y="400" font-size="9" fill="#0F2044" font-weight="bold" text-anchor="middle">Female</text>
+
+  <text x="20" y="432" font-size="11" fill="#BBDEFB">Status</text>
+  <rect x="20" y="440" width="78" height="26" rx="5" fill="#64B5F6"/>
+  <text x="59" y="458" font-size="9" fill="#0F2044" font-weight="bold" text-anchor="middle">Active</text>
+  <rect x="104" y="440" width="78" height="26" rx="5" fill="#1565C0"/>
+  <text x="143" y="458" font-size="9" fill="white" text-anchor="middle">Resigned</text>
+
+  <!-- KPI Cards -->
+  <rect x="220" y="76" width="220" height="110" rx="8" fill="#162D5A"/>
+  <rect x="220" y="76" width="220" height="5" rx="4" fill="#1565C0"/>
+  <text x="232" y="106" font-size="11" fill="#BBDEFB">Total Employees</text>
+  <text x="232" y="148" font-size="38" font-weight="bold" fill="#64B5F6">3,000</text>
+  <text x="232" y="175" font-size="11" fill="#64B5F6">Active: 2,550 | On Leave: 150</text>
+
+  <rect x="453" y="76" width="220" height="110" rx="8" fill="#162D5A"/>
+  <rect x="453" y="76" width="220" height="5" rx="4" fill="#1A7A4A"/>
+  <text x="465" y="106" font-size="11" fill="#BBDEFB">Avg. Monthly Salary</text>
+  <text x="465" y="148" font-size="38" font-weight="bold" fill="#80CBC4">Rs.62K</text>
+  <text x="465" y="175" font-size="11" fill="#80CBC4">Median: Rs.55,000</text>
+
+  <rect x="686" y="76" width="220" height="110" rx="8" fill="#162D5A"/>
+  <rect x="686" y="76" width="220" height="5" rx="4" fill="#B71C1C"/>
+  <text x="698" y="106" font-size="11" fill="#BBDEFB">Attrition Rate</text>
+  <text x="698" y="148" font-size="38" font-weight="bold" fill="#EF9A9A">15.0%</text>
+  <text x="698" y="175" font-size="11" fill="#FFD54F">Above 12% Benchmark</text>
+
+  <rect x="919" y="76" width="268" height="110" rx="8" fill="#162D5A"/>
+  <rect x="919" y="76" width="268" height="5" rx="4" fill="#E65100"/>
+  <text x="931" y="106" font-size="11" fill="#BBDEFB">Avg. Performance Rating</text>
+  <text x="931" y="148" font-size="38" font-weight="bold" fill="#FFCC80">3.7 / 5.0</text>
+  <text x="931" y="175" font-size="11" fill="#FFCC80">74% above 3.0 threshold</text>
+
+  <!-- Chart 1: Dept Headcount -->
+  <rect x="220" y="200" width="470" height="250" rx="8" fill="#162D5A"/>
+  <text x="232" y="225" font-size="13" font-weight="bold" fill="white">Employees by Department</text>
+  <!-- Horizontal bars -->
+  <text x="232" y="255" font-size="10" fill="#BBDEFB">Engineering</text>
+  <rect x="340" y="241" width="310" height="18" rx="3" fill="#1565C0"/>
+  <text x="658" y="255" font-size="10" fill="#64B5F6">600</text>
+  <text x="232" y="283" font-size="10" fill="#BBDEFB">Sales</text>
+  <rect x="340" y="269" width="280" height="18" rx="3" fill="#1A7A4A"/>
+  <text x="628" y="283" font-size="10" fill="#80CBC4">560</text>
+  <text x="232" y="311" font-size="10" fill="#BBDEFB">Operations</text>
+  <rect x="340" y="297" width="200" height="18" rx="3" fill="#6A1B9A"/>
+  <text x="548" y="311" font-size="10" fill="#CE93D8">400</text>
+  <text x="232" y="339" font-size="10" fill="#BBDEFB">Customer Support</text>
+  <rect x="340" y="325" width="180" height="18" rx="3" fill="#E65100"/>
+  <text x="528" y="339" font-size="10" fill="#FFAB91">360</text>
+  <text x="232" y="367" font-size="10" fill="#BBDEFB">Marketing</text>
+  <rect x="340" y="353" width="130" height="18" rx="3" fill="#00695C"/>
+  <text x="478" y="367" font-size="10" fill="#80CBC4">260</text>
+  <text x="232" y="395" font-size="10" fill="#BBDEFB">IT</text>
+  <rect x="340" y="381" width="115" height="18" rx="3" fill="#F57F17"/>
+  <text x="463" y="395" font-size="10" fill="#FFE082">230</text>
+  <text x="232" y="423" font-size="10" fill="#BBDEFB">Finance</text>
+  <rect x="340" y="409" width="95" height="18" rx="3" fill="#880E4F"/>
+  <text x="443" y="423" font-size="10" fill="#F48FB1">190</text>
+  <text x="232" y="440" font-size="10" fill="#BBDEFB">Others</text>
+  <rect x="340" y="426" width="80" height="18" rx="3" fill="#37474F"/>
+  <text x="428" y="440" font-size="10" fill="#B0BEC5">200</text>
+
+  <!-- Chart 2: Gender Distribution (donut) -->
+  <rect x="705" y="200" width="280" height="250" rx="8" fill="#162D5A"/>
+  <text x="717" y="225" font-size="13" font-weight="bold" fill="white">Gender Distribution</text>
+  <circle cx="845" cy="315" r="80" fill="#0F2044"/>
+  <path d="M845,315 L845,235 A80,80 0 0,1 917,355 Z" fill="#1565C0"/>
+  <path d="M845,315 L917,355 A80,80 0 1,1 845,235 Z" fill="#E91E63"/>
+  <circle cx="845" cy="315" r="45" fill="#162D5A"/>
+  <text x="845" y="310" font-size="13" font-weight="bold" fill="white" text-anchor="middle">55%</text>
+  <text x="845" y="328" font-size="9" fill="#B2DFDB" text-anchor="middle">Male</text>
+  <rect x="717" y="420" width="12" height="12" fill="#1565C0"/>
+  <text x="735" y="432" font-size="10" fill="#BBDEFB">Male: 1,650 (55%)</text>
+  <rect x="717" y="438" width="12" height="12" fill="#E91E63"/>
+  <text x="735" y="450" font-size="10" fill="#BBDEFB">Female: 1,350 (45%)</text>
+
+  <!-- Chart 3: Salary by Dept -->
+  <rect x="998" y="200" width="189" height="250" rx="8" fill="#162D5A"/>
+  <text x="1010" y="225" font-size="12" font-weight="bold" fill="white">Avg Salary</text>
+  <text x="1010" y="240" font-size="10" fill="#BBDEFB">by Department</text>
+  <text x="1010" y="268" font-size="10" fill="#BBDEFB">Product</text>
+  <rect x="1010" y="272" width="165" height="14" rx="3" fill="#E65100"/>
+  <text x="1178" y="284" font-size="9" fill="#FFAB91" text-anchor="end">Rs.98K</text>
+  <text x="1010" y="298" font-size="10" fill="#BBDEFB">Engineering</text>
+  <rect x="1010" y="302" width="140" height="14" rx="3" fill="#1565C0"/>
+  <text x="1153" y="314" font-size="9" fill="#64B5F6" text-anchor="end">Rs.82K</text>
+  <text x="1010" y="328" font-size="10" fill="#BBDEFB">Legal</text>
+  <rect x="1010" y="332" width="130" height="14" rx="3" fill="#880E4F"/>
+  <text x="1143" y="344" font-size="9" fill="#F48FB1" text-anchor="end">Rs.77K</text>
+  <text x="1010" y="358" font-size="10" fill="#BBDEFB">Finance</text>
+  <rect x="1010" y="362" width="110" height="14" rx="3" fill="#1A7A4A"/>
+  <text x="1123" y="374" font-size="9" fill="#80CBC4" text-anchor="end">Rs.64K</text>
+  <text x="1010" y="388" font-size="10" fill="#BBDEFB">IT</text>
+  <rect x="1010" y="392" width="95" height="14" rx="3" fill="#F57F17"/>
+  <text x="1108" y="404" font-size="9" fill="#FFE082" text-anchor="end">Rs.56K</text>
+  <text x="1010" y="418" font-size="10" fill="#BBDEFB">Sales</text>
+  <rect x="1010" y="422" width="80" height="14" rx="3" fill="#6A1B9A"/>
+  <text x="1093" y="434" font-size="9" fill="#CE93D8" text-anchor="end">Rs.47K</text>
+  <text x="1010" y="448" font-size="10" fill="#BBDEFB">Support</text>
+  <rect x="1010" y="452" width="55" height="14" rx="3" fill="#37474F"/>
+  <text x="1068" y="464" font-size="9" fill="#B0BEC5" text-anchor="end">Rs.32K</text>
+
+  <!-- Chart 4: Experience Distribution -->
+  <rect x="220" y="465" width="460" height="265" rx="8" fill="#162D5A"/>
+  <text x="232" y="490" font-size="13" font-weight="bold" fill="white">Experience Band Distribution</text>
+  <rect x="250" y="640" width="80" height="65" rx="4" fill="#1565C0"/>
+  <text x="290" y="628" font-size="10" fill="#64B5F6" text-anchor="middle">580</text>
+  <text x="290" y="718" font-size="10" fill="#BBDEFB" text-anchor="middle">Junior</text>
+  <text x="290" y="730" font-size="9" fill="#78909C" text-anchor="middle">(0-2 yrs)</text>
+  <rect x="360" y="580" width="80" height="125" rx="4" fill="#1A7A4A"/>
+  <text x="400" y="568" font-size="10" fill="#80CBC4" text-anchor="middle">1,200</text>
+  <text x="400" y="718" font-size="10" fill="#BBDEFB" text-anchor="middle">Mid</text>
+  <text x="400" y="730" font-size="9" fill="#78909C" text-anchor="middle">(2-5 yrs)</text>
+  <rect x="470" y="540" width="80" height="165" rx="4" fill="#E65100"/>
+  <text x="510" y="528" font-size="10" fill="#FFAB91" text-anchor="middle">850</text>
+  <text x="510" y="718" font-size="10" fill="#BBDEFB" text-anchor="middle">Senior</text>
+  <text x="510" y="730" font-size="9" fill="#78909C" text-anchor="middle">(5-10 yrs)</text>
+  <rect x="580" y="600" width="80" height="105" rx="4" fill="#880E4F"/>
+  <text x="620" y="588" font-size="10" fill="#F48FB1" text-anchor="middle">370</text>
+  <text x="620" y="718" font-size="10" fill="#BBDEFB" text-anchor="middle">Lead</text>
+  <text x="620" y="730" font-size="9" fill="#78909C" text-anchor="middle">(10+ yrs)</text>
+  <line x1="232" y1="706" x2="672" y2="706" stroke="#1A7A4A" stroke-width="1"/>
+
+  <!-- Chart 5: Attrition by Dept -->
+  <rect x="695" y="465" width="492" height="265" rx="8" fill="#162D5A"/>
+  <text x="707" y="490" font-size="13" font-weight="bold" fill="white">Attrition Rate by Department</text>
+  <text x="707" y="530" font-size="10" fill="#BBDEFB">Sales</text>
+  <rect x="780" y="517" width="184" height="16" rx="3" fill="#B71C1C"/>
+  <text x="970" y="530" font-size="10" fill="#EF9A9A">23.0%</text>
+  <text x="707" y="558" font-size="10" fill="#BBDEFB">Customer Support</text>
+  <rect x="780" y="545" width="168" height="16" rx="3" fill="#E65100"/>
+  <text x="955" y="558" font-size="10" fill="#FFAB91">21.0%</text>
+  <text x="707" y="586" font-size="10" fill="#BBDEFB">Operations</text>
+  <rect x="780" y="573" width="136" height="16" rx="3" fill="#F57F17"/>
+  <text x="923" y="586" font-size="10" fill="#FFE082">17.0%</text>
+  <text x="707" y="614" font-size="10" fill="#BBDEFB">HR</text>
+  <rect x="780" y="601" width="112" height="16" rx="3" fill="#1A7A4A"/>
+  <text x="899" y="614" font-size="10" fill="#80CBC4">14.0%</text>
+  <text x="707" y="642" font-size="10" fill="#BBDEFB">Marketing</text>
+  <rect x="780" y="629" width="88" height="16" rx="3" fill="#1565C0"/>
+  <text x="875" y="642" font-size="10" fill="#64B5F6">11.0%</text>
+  <text x="707" y="670" font-size="10" fill="#BBDEFB">Engineering</text>
+  <rect x="780" y="657" width="56" height="16" rx="3" fill="#1A7A4A"/>
+  <text x="843" y="670" font-size="10" fill="#80CBC4">7.0%</text>
+  <line x1="780" y1="685" x2="1170" y2="685" stroke="#B71C1C" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="1172" y="689" font-size="9" fill="#EF9A9A">15% Threshold</text>
+
+  <rect x="0" y="732" width="1200" height="18" fill="#162D5A"/>
+  <text x="600" y="745" font-size="9" fill="#546E7A" text-anchor="middle">HR Analytics Dashboard | Powered by Microsoft Excel | Data: hr_dataset.xlsx | 3,000 Employees</text>
+</svg>

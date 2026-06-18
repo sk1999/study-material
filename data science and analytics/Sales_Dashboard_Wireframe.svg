@@ -1,0 +1,173 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#0F2044"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="65" fill="#1A7A4A"/>
+  <text x="24" y="42" font-size="26" font-weight="bold" fill="white">SALES PERFORMANCE DASHBOARD</text>
+  <text x="900" y="30" font-size="11" fill="#B2DFDB">RetailMax India Pvt Ltd</text>
+  <text x="900" y="50" font-size="11" fill="#B2DFDB">FY 2022 - 2024  |  All Regions</text>
+  <rect x="1100" y="12" width="85" height="40" rx="6" fill="#0F2044"/>
+  <text x="1142" y="28" font-size="10" fill="#00C853" text-anchor="middle">LIVE</text>
+  <text x="1142" y="46" font-size="10" fill="white" text-anchor="middle">Auto-Refresh</text>
+
+  <!-- Slicer Panel -->
+  <rect x="10" y="76" width="200" height="660" rx="8" fill="#162D5A"/>
+  <text x="110" y="103" font-size="13" font-weight="bold" fill="#00C853" text-anchor="middle">FILTERS</text>
+  <line x1="20" y1="110" x2="200" y2="110" stroke="#1A7A4A" stroke-width="1"/>
+
+  <!-- Year Slicer -->
+  <text x="20" y="132" font-size="11" fill="#B2DFDB">Year</text>
+  <rect x="20" y="140" width="80" height="28" rx="5" fill="#1A7A4A"/>
+  <text x="60" y="159" font-size="11" fill="white" text-anchor="middle">2022</text>
+  <rect x="108" y="140" width="80" height="28" rx="5" fill="#00C853"/>
+  <text x="148" y="159" font-size="11" fill="#0F2044" font-weight="bold" text-anchor="middle">2024</text>
+
+  <!-- Region Slicer -->
+  <text x="20" y="195" font-size="11" fill="#B2DFDB">Region</text>
+  <rect x="20" y="203" width="80" height="28" rx="5" fill="#00C853"/>
+  <text x="60" y="222" font-size="11" fill="#0F2044" font-weight="bold" text-anchor="middle">North</text>
+  <rect x="108" y="203" width="80" height="28" rx="5" fill="#1A7A4A"/>
+  <text x="148" y="222" font-size="11" fill="white" text-anchor="middle">South</text>
+  <rect x="20" y="237" width="80" height="28" rx="5" fill="#1A7A4A"/>
+  <text x="60" y="256" font-size="11" fill="white" text-anchor="middle">East</text>
+  <rect x="108" y="237" width="80" height="28" rx="5" fill="#1A7A4A"/>
+  <text x="148" y="256" font-size="11" fill="white" text-anchor="middle">West</text>
+
+  <!-- Category Slicer -->
+  <text x="20" y="285" font-size="11" fill="#B2DFDB">Category</text>
+  <rect x="20" y="293" width="170" height="26" rx="5" fill="#1A7A4A"/>
+  <text x="105" y="311" font-size="10" fill="white" text-anchor="middle">Electronics</text>
+  <rect x="20" y="325" width="170" height="26" rx="5" fill="#1A7A4A"/>
+  <text x="105" y="343" font-size="10" fill="white" text-anchor="middle">Furniture</text>
+  <rect x="20" y="357" width="170" height="26" rx="5" fill="#00C853"/>
+  <text x="105" y="375" font-size="10" fill="#0F2044" font-weight="bold" text-anchor="middle">Clothing</text>
+  <rect x="20" y="389" width="170" height="26" rx="5" fill="#1A7A4A"/>
+  <text x="105" y="407" font-size="10" fill="white" text-anchor="middle">Food &amp; Grocery</text>
+  <rect x="20" y="421" width="170" height="26" rx="5" fill="#1A7A4A"/>
+  <text x="105" y="439" font-size="10" fill="white" text-anchor="middle">Stationery</text>
+
+  <!-- Segment Slicer -->
+  <text x="20" y="468" font-size="11" fill="#B2DFDB">Segment</text>
+  <rect x="20" y="476" width="78" height="26" rx="5" fill="#1A7A4A"/>
+  <text x="59" y="494" font-size="9" fill="white" text-anchor="middle">Corporate</text>
+  <rect x="105" y="476" width="78" height="26" rx="5" fill="#1A7A4A"/>
+  <text x="144" y="494" font-size="9" fill="white" text-anchor="middle">SME</text>
+  <rect x="20" y="508" width="78" height="26" rx="5" fill="#1A7A4A"/>
+  <text x="59" y="526" font-size="9" fill="white" text-anchor="middle">Government</text>
+  <rect x="105" y="508" width="78" height="26" rx="5" fill="#1A7A4A"/>
+  <text x="144" y="526" font-size="9" fill="white" text-anchor="middle">Retail</text>
+
+  <!-- KPI Cards Row -->
+  <!-- Total Revenue -->
+  <rect x="220" y="76" width="232" height="110" rx="8" fill="#162D5A" filter="url(#shadow)"/>
+  <rect x="220" y="76" width="232" height="5" rx="4" fill="#1A7A4A"/>
+  <text x="232" y="106" font-size="11" fill="#B2DFDB">Total Revenue</text>
+  <text x="232" y="145" font-size="36" font-weight="bold" fill="#00C853">Rs.4.2M</text>
+  <text x="232" y="175" font-size="11" fill="#00C853">+12.4% vs Prior Year</text>
+
+  <!-- Total Orders -->
+  <rect x="465" y="76" width="232" height="110" rx="8" fill="#162D5A"/>
+  <rect x="465" y="76" width="232" height="5" rx="4" fill="#1565C0"/>
+  <text x="477" y="106" font-size="11" fill="#B2DFDB">Total Orders</text>
+  <text x="477" y="145" font-size="36" font-weight="bold" fill="#64B5F6">5,000</text>
+  <text x="477" y="175" font-size="11" fill="#64B5F6">+8.2% vs Prior Year</text>
+
+  <!-- Avg Order Value -->
+  <rect x="710" y="76" width="232" height="110" rx="8" fill="#162D5A"/>
+  <rect x="710" y="76" width="232" height="5" rx="4" fill="#6A1B9A"/>
+  <text x="722" y="106" font-size="11" fill="#B2DFDB">Avg Order Value</text>
+  <text x="722" y="145" font-size="36" font-weight="bold" fill="#CE93D8">Rs.840</text>
+  <text x="722" y="175" font-size="11" fill="#FFD54F">Target: Rs.900 | -6.7%</text>
+
+  <!-- Profit Margin -->
+  <rect x="955" y="76" width="232" height="110" rx="8" fill="#162D5A"/>
+  <rect x="955" y="76" width="232" height="5" rx="4" fill="#B71C1C"/>
+  <text x="967" y="106" font-size="11" fill="#B2DFDB">Profit Margin</text>
+  <text x="967" y="145" font-size="36" font-weight="bold" fill="#EF9A9A">23.4%</text>
+  <text x="967" y="175" font-size="11" fill="#00C853">+2.1pp vs Prior Year</text>
+
+  <!-- Chart 1: Revenue by Region (bar) -->
+  <rect x="220" y="200" width="470" height="240" rx="8" fill="#162D5A"/>
+  <text x="232" y="225" font-size="13" font-weight="bold" fill="white">Revenue by Region</text>
+  <!-- Bars -->
+  <rect x="260" y="265" width="60" height="130" rx="4" fill="#1A7A4A"/>
+  <text x="290" y="258" font-size="10" fill="#00C853" text-anchor="middle">Rs.1.4M</text>
+  <text x="290" y="410" font-size="10" fill="#B2DFDB" text-anchor="middle">North</text>
+  <rect x="355" y="285" width="60" height="110" rx="4" fill="#1565C0"/>
+  <text x="385" y="278" font-size="10" fill="#64B5F6" text-anchor="middle">Rs.1.1M</text>
+  <text x="385" y="410" font-size="10" fill="#B2DFDB" text-anchor="middle">South</text>
+  <rect x="450" y="300" width="60" height="95" rx="4" fill="#6A1B9A"/>
+  <text x="480" y="293" font-size="10" fill="#CE93D8" text-anchor="middle">Rs.0.9M</text>
+  <text x="480" y="410" font-size="10" fill="#B2DFDB" text-anchor="middle">East</text>
+  <rect x="545" y="310" width="60" height="85" rx="4" fill="#B71C1C"/>
+  <text x="575" y="303" font-size="10" fill="#EF9A9A" text-anchor="middle">Rs.0.8M</text>
+  <text x="575" y="410" font-size="10" fill="#B2DFDB" text-anchor="middle">West</text>
+  <line x1="240" y1="395" x2="660" y2="395" stroke="#1A7A4A" stroke-width="1"/>
+
+  <!-- Chart 2: Monthly Revenue Trend (line) -->
+  <rect x="705" y="200" width="482" height="240" rx="8" fill="#162D5A"/>
+  <text x="717" y="225" font-size="13" font-weight="bold" fill="white">Monthly Revenue Trend</text>
+  <!-- Line chart mockup -->
+  <polyline points="730,380 762,360 794,355 826,340 858,350 890,330 922,320 954,310 986,320 1018,305 1050,295 1082,285 1114,300 1146,280 1162,270" fill="none" stroke="#00C853" stroke-width="2.5"/>
+  <polyline points="730,390 762,375 794,385 826,370 858,380 890,365 922,360 954,350 986,355 1018,345 1050,338 1082,330 1114,342 1146,325 1162,318" fill="none" stroke="#64B5F6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="730" y="416" font-size="9" fill="#B2DFDB">Jan</text>
+  <text x="858" y="416" font-size="9" fill="#B2DFDB">May</text>
+  <text x="986" y="416" font-size="9" fill="#B2DFDB">Sep</text>
+  <text x="1110" y="416" font-size="9" fill="#B2DFDB">Dec</text>
+  <line x1="720" y1="425" x2="1175" y2="425" stroke="#1A7A4A" stroke-width="1"/>
+  <!-- Legend -->
+  <rect x="730" y="430" width="12" height="4" fill="#00C853"/>
+  <text x="748" y="436" font-size="9" fill="#B2DFDB">2024</text>
+  <rect x="790" y="430" width="12" height="4" fill="#64B5F6"/>
+  <text x="808" y="436" font-size="9" fill="#B2DFDB">2023</text>
+
+  <!-- Chart 3: Top Products (bar) -->
+  <rect x="220" y="455" width="470" height="275" rx="8" fill="#162D5A"/>
+  <text x="232" y="480" font-size="13" font-weight="bold" fill="white">Top 5 Products by Revenue</text>
+  <text x="232" y="510" font-size="10" fill="#B2DFDB">Laptop</text>
+  <rect x="310" y="497" width="345" height="20" rx="3" fill="#1A7A4A"/>
+  <text x="662" y="512" font-size="10" fill="#00C853">Rs.520K</text>
+  <text x="232" y="540" font-size="10" fill="#B2DFDB">Smartphone</text>
+  <rect x="310" y="527" width="280" height="20" rx="3" fill="#1565C0"/>
+  <text x="597" y="542" font-size="10" fill="#64B5F6">Rs.430K</text>
+  <text x="232" y="570" font-size="10" fill="#B2DFDB">Monitor</text>
+  <rect x="310" y="557" width="210" height="20" rx="3" fill="#6A1B9A"/>
+  <text x="527" y="572" font-size="10" fill="#CE93D8">Rs.320K</text>
+  <text x="232" y="600" font-size="10" fill="#B2DFDB">Office Chair</text>
+  <rect x="310" y="587" width="160" height="20" rx="3" fill="#E65100"/>
+  <text x="477" y="602" font-size="10" fill="#FFAB91">Rs.245K</text>
+  <text x="232" y="630" font-size="10" fill="#B2DFDB">Tablet</text>
+  <rect x="310" y="617" width="120" height="20" rx="3" fill="#00695C"/>
+  <text x="437" y="632" font-size="10" fill="#80CBC4">Rs.184K</text>
+
+  <!-- Chart 4: Category Pie -->
+  <rect x="705" y="455" width="482" height="275" rx="8" fill="#162D5A"/>
+  <text x="717" y="480" font-size="13" font-weight="bold" fill="white">Revenue by Category</text>
+  <circle cx="880" cy="595" r="100" fill="#0F2044"/>
+  <!-- Pie slices (simplified arcs) -->
+  <path d="M880,595 L880,495 A100,100 0 0,1 980,595 Z" fill="#1A7A4A"/>
+  <path d="M880,595 L980,595 A100,100 0 0,1 880,695 Z" fill="#1565C0"/>
+  <path d="M880,595 L880,695 A100,100 0 0,1 780,595 Z" fill="#6A1B9A"/>
+  <path d="M880,595 L780,595 A100,100 0 0,1 850,498 Z" fill="#B71C1C"/>
+  <path d="M880,595 L850,498 A100,100 0 0,1 880,495 Z" fill="#E65100"/>
+  <!-- Legend -->
+  <rect x="1000" y="510" width="12" height="12" fill="#1A7A4A"/>
+  <text x="1020" y="522" font-size="10" fill="#B2DFDB">Electronics 32%</text>
+  <rect x="1000" y="535" width="12" height="12" fill="#1565C0"/>
+  <text x="1020" y="547" font-size="10" fill="#B2DFDB">Clothing 25%</text>
+  <rect x="1000" y="560" width="12" height="12" fill="#6A1B9A"/>
+  <text x="1020" y="572" font-size="10" fill="#B2DFDB">Food 20%</text>
+  <rect x="1000" y="585" width="12" height="12" fill="#B71C1C"/>
+  <text x="1020" y="597" font-size="10" fill="#B2DFDB">Furniture 15%</text>
+  <rect x="1000" y="610" width="12" height="12" fill="#E65100"/>
+  <text x="1020" y="622" font-size="10" fill="#B2DFDB">Stationery 8%</text>
+
+  <!-- Footer -->
+  <rect x="0" y="732" width="1200" height="18" fill="#162D5A"/>
+  <text x="600" y="745" font-size="9" fill="#546E7A" text-anchor="middle">Data Source: Fabric Lakehouse | Refresh: Daily 06:00 IST | Built with Excel + PivotTables + Slicers</text>
+
+  <defs>
+    <filter id="shadow"><feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/></filter>
+  </defs>
+</svg>
