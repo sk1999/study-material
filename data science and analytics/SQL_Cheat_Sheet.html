@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SQL Cheat Sheet for Data Analytics - Module 3</title>
+<style>
+  @page { size: A4 landscape; margin: 8mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 9.5pt; background: #fff; color: #1C1C1C; line-height: 1.35; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  .header { background: #0F2044; color: white; padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; border-radius: 6px; margin-bottom: 8px; white-space: nowrap; overflow: hidden; }
+  .header h1 { font-size: 15pt; font-weight: bold; color: #00B8D4; white-space: nowrap; }
+  .header .sub { font-size: 9pt; color: #BBDEFB; margin-top: 2px; white-space: nowrap; }
+  .legend { display:flex; gap:14px; align-items:center; font-size:9pt; white-space:nowrap; flex-shrink:0; margin-left: 16px; }
+  .legend span.tag { font-family:'Courier New',monospace; font-weight:bold; padding:2px 6px; border-radius:4px; margin-right:4px; }
+  .tag.dql{background:#E3F2FD;color:#1565C0;} .tag.dml{background:#E8F5E9;color:#1A7A4A;} .tag.ddl{background:#F3E5F5;color:#6A1B9A;}
+
+  .grid { display: grid; gap: 7px; }
+  .grid2x2 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; height: 615px; }
+  .grid3x2 { grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; height: 590px; }
+
+  .panel { background: #F8FBFF; border: 1px solid #90CAF9; border-radius: 6px; padding: 7px 10px; display:flex; flex-direction:column; gap:5px; overflow:hidden; }
+  .panel-title { background: #0F2044; color: #00B8D4; font-weight: bold; font-size: 11.5pt; padding: 4px 9px; border-radius: 4px; margin: -7px -10px 0 -10px; display:flex; align-items:center; gap:8px; flex-shrink:0; }
+  .panel-title .num { background:#00B8D4; color:#0F2044; border-radius:50%; width:19px; height:19px; flex-shrink:0; display:inline-flex; align-items:center; justify-content:center; font-size:9.5pt; }
+  .panel-title .ico { margin-left:auto; font-size:11pt; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #1565C0; color: white; padding: 2.5px 6px; font-size: 8.8pt; text-align: left; }
+  td { padding: 2.5px 6px; border-bottom: 1px solid #E3F2FD; font-size: 8.8pt; vertical-align: top; }
+  tr:nth-child(even) td { background: #EFF8FF; }
+  .kw { font-family: 'Courier New', monospace; color: #1565C0; font-weight: bold; }
+
+  .code { font-family: 'Courier New', monospace; color: #0D47A1; font-size: 8.8pt; display:block; white-space:pre; line-height:1.45; }
+  .codeblock { background:#0F2044; border-radius:5px; padding:7px 9px; flex-shrink:0; }
+  .codeblock .code { color:#E3F2FD; }
+  .codeblock .kw2 { color:#00B8D4; }
+  .codeblock .cm { color:#80CBC4; }
+  .codeblock .str { color:#FFD54F; }
+
+  .note { background: #E3F2FD; border-left: 4px solid #1565C0; padding: 4px 8px; font-size: 8.8pt; border-radius: 0 4px 4px 0; }
+  .warn { background: #FFF3E0; border-left: 4px solid #E65100; padding: 4px 8px; font-size: 8.8pt; border-radius: 0 4px 4px 0; }
+
+  .footer { background: #0F2044; color: #90A4AE; text-align: center; font-size: 9pt; padding: 6px; border-radius: 6px; margin-top: 8px; }
+  .smallcode { font-family:'Courier New',monospace; font-size:8.4pt; color:#0D47A1; }
+  .pagefoot { text-align:right; font-size:8pt; color:#90A4AE; margin-top:4px; }
+  .spacer { flex-grow: 1; }
+</style>
+</head>
+<body>
+
+<!-- ============================== PAGE 1 ============================== -->
+<div class="page">
+<div class="header">
+  <div>
+    <h1>🗄️ SQL CHEAT SHEET FOR DATA ANALYTICS</h1>
+    <div class="sub">Module 3: SQL for Data Analysis | PostgreSQL Edition | RetailMax India</div>
+  </div>
+  <div class="legend">
+    <div><span class="tag dql">DQL</span>Query</div>
+    <div><span class="tag dml">DML</span>Manipulate</div>
+    <div><span class="tag ddl">DDL</span>Define</div>
+  </div>
+</div>
+
+<div class="grid grid2x2">
+
+<!-- 1. BASIC QUERIES -->
+<div class="panel">
+  <div class="panel-title"><span class="num">1</span>BASIC QUERIES</div>
+  <div class="codeblock"><span class="code"><span class="kw2">SELECT</span> col1, col2, <span class="kw2">DISTINCT</span> col3
+<span class="kw2">FROM</span> table_name
+<span class="kw2">WHERE</span> condition;</span></div>
+  <table>
+    <tr><th>Operator</th><th>Example</th><th>Meaning</th></tr>
+    <tr><td class="kw">AND / OR</td><td class="smallcode">a AND b / a OR b</td><td>Both / either true</td></tr>
+    <tr><td class="kw">NOT</td><td class="smallcode">NOT a</td><td>Negation</td></tr>
+    <tr><td class="kw">BETWEEN</td><td class="smallcode">col BETWEEN 1 AND 10</td><td>Inclusive range</td></tr>
+    <tr><td class="kw">IN</td><td class="smallcode">col IN (1,2,3)</td><td>Match any in list</td></tr>
+    <tr><td class="kw">LIKE / ILIKE</td><td class="smallcode">name LIKE 'A%'</td><td>Pattern (ILIKE = case-insens.)</td></tr>
+    <tr><td class="kw">IS NULL</td><td class="smallcode">col IS NULL</td><td>Never use = NULL</td></tr>
+  </table>
+  <div class="spacer"></div>
+</div>
+
+<!-- 2. SORTING & LIMITING -->
+<div class="panel">
+  <div class="panel-title"><span class="num">2</span>SORTING &amp; LIMITING</div>
+  <div class="codeblock"><span class="code"><span class="cm">-- ORDER BY (default ASC)</span>
+<span class="kw2">SELECT</span> * <span class="kw2">FROM</span> products
+<span class="kw2">ORDER BY</span> unit_price <span class="kw2">DESC</span>;
+
+<span class="cm">-- Pagination</span>
+<span class="kw2">SELECT</span> * <span class="kw2">FROM</span> products
+<span class="kw2">ORDER BY</span> unit_price <span class="kw2">DESC</span>
+<span class="kw2">LIMIT</span> 10 <span class="kw2">OFFSET</span> 10;</span></div>
+  <div class="note">Multi-column sort: <span class="kw">ORDER BY category ASC, price DESC</span> — first column is the primary sort, later columns break ties.</div>
+  <div class="warn">⚠️ Always pair LIMIT with ORDER BY — otherwise "top N" is not deterministic between runs.</div>
+  <div class="spacer"></div>
+</div>
+
+<!-- 3. AGGREGATIONS -->
+<div class="panel">
+  <div class="panel-title"><span class="num">3</span>AGGREGATIONS <span class="ico">Σ</span></div>
+  <div class="codeblock"><span class="code"><span class="kw2">SELECT</span> region, COUNT(*) <span class="kw2">AS</span> cnt,
+       SUM(revenue) <span class="kw2">AS</span> total_sales,
+       AVG(revenue) <span class="kw2">AS</span> avg_sales
+<span class="kw2">FROM</span> orders
+<span class="kw2">GROUP BY</span> region
+<span class="kw2">HAVING</span> SUM(revenue) > 100000;</span></div>
+  <table>
+    <tr><th>Function</th><th>NULL behavior</th></tr>
+    <tr><td class="kw">COUNT(*)</td><td>Counts ALL rows (incl. NULLs)</td></tr>
+    <tr><td class="kw">COUNT(col)</td><td>Ignores NULLs in that column</td></tr>
+    <tr><td class="kw">SUM / AVG / MIN / MAX</td><td>Ignore NULLs</td></tr>
+  </table>
+  <div class="note">WHERE filters rows BEFORE grouping. HAVING filters GROUPS afterward — and can use aggregate functions.</div>
+</div>
+
+<!-- 4. JOINS -->
+<div class="panel">
+  <div class="panel-title"><span class="num">4</span>JOINS</div>
+  <div class="codeblock"><span class="code"><span class="kw2">SELECT</span> o.order_id, c.customer_name
+<span class="kw2">FROM</span> orders o
+<span class="kw2">INNER JOIN</span> customers c
+  <span class="kw2">ON</span> o.customer_id = c.customer_id;
+
+<span class="cm">-- LEFT JOIN keeps all rows from orders</span>
+<span class="kw2">... LEFT JOIN</span> customers c <span class="kw2">ON</span> ...</span></div>
+  <table>
+    <tr><th>Type</th><th>Keeps</th></tr>
+    <tr><td class="kw">INNER JOIN</td><td>Only rows matched in both tables</td></tr>
+    <tr><td class="kw">LEFT JOIN</td><td>All left rows + matches (NULL if none)</td></tr>
+    <tr><td class="kw">RIGHT JOIN</td><td>All right rows + matches</td></tr>
+    <tr><td class="kw">FULL OUTER JOIN</td><td>All rows, both sides (no MySQL support)</td></tr>
+  </table>
+  <div class="note">Anti-join: <span class="kw">LEFT JOIN ... WHERE right.id IS NULL</span> — finds "no match" rows (e.g. customers with no orders).</div>
+</div>
+
+</div><!-- end grid page 1 -->
+<div class="pagefoot">Module 3: SQL for Data Analysis — Page 1 of 3</div>
+</div><!-- end page 1 -->
+
+<!-- ============================== PAGE 2 ============================== -->
+<div class="page">
+<div class="header">
+  <div>
+    <h1>🗄️ SQL CHEAT SHEET FOR DATA ANALYTICS</h1>
+    <div class="sub">Module 3: SQL for Data Analysis | PostgreSQL Edition | RetailMax India</div>
+  </div>
+  <div class="legend">
+    <div><span class="tag dql">DQL</span>Query</div>
+    <div><span class="tag dml">DML</span>Manipulate</div>
+    <div><span class="tag ddl">DDL</span>Define</div>
+  </div>
+</div>
+
+<div class="grid grid2x2">
+
+<!-- 5. SUBQUERIES & CTEs -->
+<div class="panel">
+  <div class="panel-title"><span class="num">5</span>SUBQUERIES &amp; CTEs</div>
+  <div class="codeblock"><span class="code"><span class="cm">-- Subquery in WHERE (scalar)</span>
+<span class="kw2">SELECT</span> * <span class="kw2">FROM</span> employees
+<span class="kw2">WHERE</span> salary > (<span class="kw2">SELECT</span> AVG(salary) <span class="kw2">FROM</span> employees);</span></div>
+  <div class="codeblock"><span class="code"><span class="cm">-- CTE (WITH clause)</span>
+<span class="kw2">WITH</span> region_sales <span class="kw2">AS</span> (
+  <span class="kw2">SELECT</span> region, SUM(revenue) <span class="kw2">AS</span> rev
+  <span class="kw2">FROM</span> orders <span class="kw2">GROUP BY</span> region
+)
+<span class="kw2">SELECT</span> * <span class="kw2">FROM</span> region_sales <span class="kw2">WHERE</span> rev > 100000;</span></div>
+  <div class="note">A CTE names a subquery so you can reference it like a table — it only exists for that one query. CTEs can chain (reference earlier CTEs in the same WITH clause).</div>
+  <div class="spacer"></div>
+</div>
+
+<!-- 6. WINDOW FUNCTIONS -->
+<div class="panel">
+  <div class="panel-title"><span class="num">6</span>WINDOW FUNCTIONS <span class="ico">📊</span></div>
+  <div class="codeblock"><span class="code"><span class="kw2">SELECT</span> name, salary,
+  ROW_NUMBER() <span class="kw2">OVER</span> (<span class="kw2">ORDER BY</span> salary <span class="kw2">DESC</span>) <span class="kw2">AS</span> rn,
+  RANK()       <span class="kw2">OVER</span> (<span class="kw2">ORDER BY</span> salary <span class="kw2">DESC</span>) <span class="kw2">AS</span> rnk,
+  DENSE_RANK() <span class="kw2">OVER</span> (<span class="kw2">ORDER BY</span> salary <span class="kw2">DESC</span>) <span class="kw2">AS</span> drnk,
+  SUM(salary)  <span class="kw2">OVER</span> (<span class="kw2">PARTITION BY</span> dept_id
+                  <span class="kw2">ORDER BY</span> salary) <span class="kw2">AS</span> running_total
+<span class="kw2">FROM</span> employees;</span></div>
+  <div class="note">RANK leaves gaps after ties (1,2,2,4); DENSE_RANK doesn't (1,2,2,3). PARTITION BY restarts the calc per group WITHOUT collapsing rows. Also useful: LAG, LEAD, NTILE.</div>
+  <div class="spacer"></div>
+</div>
+
+<!-- 7. CONDITIONAL LOGIC -->
+<div class="panel">
+  <div class="panel-title"><span class="num">7</span>CONDITIONAL LOGIC</div>
+  <div class="codeblock"><span class="code"><span class="kw2">SELECT</span> name, salary,
+  <span class="kw2">CASE</span>
+    <span class="kw2">WHEN</span> salary >= 100000 <span class="kw2">THEN</span> <span class="str">'High'</span>
+    <span class="kw2">WHEN</span> salary >= 50000  <span class="kw2">THEN</span> <span class="str">'Medium'</span>
+    <span class="kw2">ELSE</span> <span class="str">'Low'</span>
+  <span class="kw2">END AS</span> salary_band
+<span class="kw2">FROM</span> employees;</span></div>
+  <div class="codeblock"><span class="code"><span class="cm">-- CASE inside an aggregate</span>
+<span class="kw2">SELECT</span> region,
+  COUNT(<span class="kw2">CASE WHEN</span> status=<span class="str">'Cancelled'</span> <span class="kw2">THEN</span> 1 <span class="kw2">END</span>) <span class="kw2">AS</span> cancelled
+<span class="kw2">FROM</span> orders <span class="kw2">GROUP BY</span> region;</span></div>
+  <div class="note">Checked top-to-bottom — first match wins. ELSE is optional (omitted = NULL for non-matches).</div>
+</div>
+
+<!-- 8. DML -->
+<div class="panel">
+  <div class="panel-title"><span class="num">8</span>DATA MANIPULATION (DML)</div>
+  <div class="codeblock"><span class="code"><span class="kw2">INSERT INTO</span> table_name (col1, col2)
+<span class="kw2">VALUES</span> (val1, val2);
+
+<span class="kw2">UPDATE</span> table_name
+<span class="kw2">SET</span> col1 = val1
+<span class="kw2">WHERE</span> condition;
+
+<span class="kw2">DELETE FROM</span> table_name
+<span class="kw2">WHERE</span> condition;</span></div>
+  <div class="warn">⚠️ ALWAYS test your WHERE clause as a SELECT first! No WHERE on UPDATE/DELETE = entire table affected.</div>
+  <div class="spacer"></div>
+</div>
+
+</div><!-- end grid page 2 -->
+<div class="pagefoot">Module 3: SQL for Data Analysis — Page 2 of 3</div>
+</div><!-- end page 2 -->
+
+<!-- ============================== PAGE 3 ============================== -->
+<div class="page">
+<div class="header">
+  <div>
+    <h1>🗄️ SQL CHEAT SHEET FOR DATA ANALYTICS</h1>
+    <div class="sub">Module 3: SQL for Data Analysis | PostgreSQL Edition | RetailMax India</div>
+  </div>
+  <div class="legend">
+    <div><span class="tag dql">DQL</span>Query</div>
+    <div><span class="tag dml">DML</span>Manipulate</div>
+    <div><span class="tag ddl">DDL</span>Define</div>
+  </div>
+</div>
+
+<div class="grid grid3x2">
+
+<!-- 9. DDL -->
+<div class="panel">
+  <div class="panel-title"><span class="num">9</span>TABLE OPS (DDL)</div>
+  <div class="codeblock"><span class="code"><span class="kw2">CREATE TABLE</span> employees (
+  id <span class="kw2">INT PRIMARY KEY</span>,
+  name <span class="kw2">VARCHAR</span>(100) <span class="kw2">NOT NULL</span>,
+  salary <span class="kw2">NUMERIC</span>(10,2)
+);
+
+<span class="kw2">ALTER TABLE</span> employees
+  <span class="kw2">ADD COLUMN</span> email <span class="kw2">VARCHAR</span>(100);
+
+<span class="kw2">DROP TABLE</span> employees;</span></div>
+  <div class="note"><span class="kw">SERIAL</span> = auto-increment. <span class="kw">REFERENCES tbl(col)</span> = foreign key.</div>
+  <div class="spacer"></div>
+</div>
+
+<!-- 10. STRING FUNCTIONS -->
+<div class="panel">
+  <div class="panel-title"><span class="num">10</span>STRING FUNCTIONS <span class="ico">Aa</span></div>
+  <table>
+    <tr><th>Function</th><th>Example</th></tr>
+    <tr><td class="kw">CONCAT / ||</td><td class="smallcode">first||' '||last</td></tr>
+    <tr><td class="kw">UPPER/LOWER</td><td class="smallcode">UPPER(name)</td></tr>
+    <tr><td class="kw">INITCAP</td><td class="smallcode">INITCAP(name)</td></tr>
+    <tr><td class="kw">SUBSTRING</td><td class="smallcode">SUBSTRING(s,1,3)</td></tr>
+    <tr><td class="kw">LENGTH</td><td class="smallcode">LENGTH(name)</td></tr>
+    <tr><td class="kw">TRIM</td><td class="smallcode">TRIM(' hi ')</td></tr>
+    <tr><td class="kw">REPLACE</td><td class="smallcode">REPLACE(s,'a','b')</td></tr>
+    <tr><td class="kw">POSITION</td><td class="smallcode">POSITION('@' IN e)</td></tr>
+  </table>
+  <div class="spacer"></div>
+</div>
+
+<!-- 11. DATE FUNCTIONS -->
+<div class="panel">
+  <div class="panel-title"><span class="num">11</span>DATE FUNCTIONS <span class="ico">📅</span></div>
+  <table>
+    <tr><th>Function</th><th>Example</th></tr>
+    <tr><td class="kw">CURRENT_DATE</td><td class="smallcode">SELECT CURRENT_DATE</td></tr>
+    <tr><td class="kw">AGE</td><td class="smallcode">AGE(now(),hire_date)</td></tr>
+    <tr><td class="kw">EXTRACT</td><td class="smallcode">EXTRACT(MONTH FROM d)</td></tr>
+    <tr><td class="kw">DATE_TRUNC</td><td class="smallcode">DATE_TRUNC('month',d)</td></tr>
+    <tr><td class="kw">+ INTERVAL</td><td class="smallcode">d + INTERVAL '7 days'</td></tr>
+    <tr><td class="kw">Date subtraction</td><td class="smallcode">date1 - date2</td></tr>
+  </table>
+  <div class="note">Function names vary by database — this sheet uses PostgreSQL syntax.</div>
+</div>
+
+<!-- 12. SET OPERATIONS -->
+<div class="panel">
+  <div class="panel-title"><span class="num">12</span>SET OPERATIONS <span class="ico">⇄</span></div>
+  <div class="codeblock"><span class="code"><span class="kw2">SELECT</span> col <span class="kw2">FROM</span> a
+<span class="kw2">UNION</span>
+<span class="kw2">SELECT</span> col <span class="kw2">FROM</span> b;
+<span class="cm">-- dedups rows</span></span></div>
+  <table>
+    <tr><th>Variant</th><th>Behavior</th></tr>
+    <tr><td class="kw">UNION ALL</td><td>Keep duplicates (faster)</td></tr>
+    <tr><td class="kw">INTERSECT</td><td>Rows in both queries</td></tr>
+    <tr><td class="kw">EXCEPT</td><td>Rows in 1st, not 2nd (A minus B)</td></tr>
+  </table>
+  <div class="warn">⚠️ Same column count & compatible types required. MySQL lacks INTERSECT/EXCEPT before 8.0.31.</div>
+</div>
+
+<!-- 13. KEYS & INDEXES -->
+<div class="panel">
+  <div class="panel-title"><span class="num">13</span>KEYS &amp; INDEXES <span class="ico">🔑</span></div>
+  <table>
+    <tr><th>Concept</th><th>What it does</th></tr>
+    <tr><td class="kw">PRIMARY KEY</td><td>Unique row ID, not NULL</td></tr>
+    <tr><td class="kw">FOREIGN KEY</td><td>References PK in another table</td></tr>
+    <tr><td class="kw">INDEX</td><td>Speeds up lookups on a column</td></tr>
+  </table>
+  <div class="codeblock"><span class="code"><span class="kw2">CREATE INDEX</span> idx_orders_date
+  <span class="kw2">ON</span> orders(order_date);</span></div>
+  <div class="note">Index = faster reads, slower writes, extra storage. Index columns used in WHERE / JOIN / ORDER BY.</div>
+</div>
+
+<!-- 14. COMMON TIPS -->
+<div class="panel">
+  <div class="panel-title"><span class="num">14</span>COMMON TIPS <span class="ico">💡</span></div>
+  <div><strong>NULL Handling</strong></div>
+  <div class="smallcode">COALESCE(phone,'N/A') AS phone</div>
+  <div style="font-size:8.8pt">NULL = NULL is NULL, not TRUE. Use IS NULL / IS NOT NULL.</div>
+  <div><strong>Aliases</strong></div>
+  <div class="smallcode">SELECT e.name AS emp, d.name AS dept<br>FROM employees e JOIN departments d<br>&nbsp;&nbsp;ON e.dept_id = d.id;</div>
+  <div class="note">✓ Index filter/join columns &nbsp; ✓ Filter early &nbsp; ✓ Avoid SELECT * &nbsp; ✓ Use LIMIT &nbsp; ✓ EXPLAIN ANALYZE</div>
+</div>
+
+</div><!-- end grid page 3 -->
+
+<div class="footer">⭐ REMEMBER: Practice regularly on the retailmax database, understand your data, and keep queries simple &amp; readable. | Happy Querying! 🗄️</div>
+<div class="pagefoot">Module 3: SQL for Data Analysis — Page 3 of 3</div>
+</div><!-- end page 3 -->
+
+</body>
+</html>
